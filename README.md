@@ -1,8 +1,3 @@
 # EW458_FINAL_PROJECT
-
-
-# LOL
-
-1. 1
-2. 2
+[Documentation](https://juanortiz28.github.io/EW458_FINAL_PROJECT/#/)
  
