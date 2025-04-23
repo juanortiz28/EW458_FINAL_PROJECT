@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-![logo](JOP01713.jpg)
+![logo](logo.png)
 
 # EW458 Mapping Software
 
