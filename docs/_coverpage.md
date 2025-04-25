@@ -1,5 +1,3 @@
-<!-- _coverpage.md -->
-
 ![](logo.png)
 
 <div class="plane-wrapper">
@@ -10,5 +8,5 @@
 
 > The world's best Mapping Software for EW458
 
-[GitHub](https://github.com/docsifyjs/docsify/)
+[GitHub](https://github.com/juanortiz28/EW458_FINAL_PROJECT)
 [Get Started](#docsify)
