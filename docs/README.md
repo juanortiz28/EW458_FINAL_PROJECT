@@ -82,5 +82,9 @@ The following maps were generated through motion through Hopper Hall
 
 ![Hopper Map](recording.gif)
 
+The following GIF is the scan from the robot, as it entered the classroom again, and completed the "A" shape scan.
+
+![A](A.gif)
+
 # Designers
 ![IJ](ij.jpg)

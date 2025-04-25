@@ -42,6 +42,10 @@ The following GIF was generated through running the Map Scanner program on the i
 
 ![Hopper Map](recording.gif)
 
+The following GIF is the scan from the robot, as it entered the classroom again, and completed the "A" shape scan.
+
+![A](A.gif)
+
 # About Designers
 pictures
  
