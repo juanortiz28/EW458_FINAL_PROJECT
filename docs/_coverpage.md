@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-![logo](logo.png)
+![](logo.png)
 
 # EW458 Mapping Software
 
