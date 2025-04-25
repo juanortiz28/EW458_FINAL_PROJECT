@@ -1,12 +1,12 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html>
 
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>EW458 Mapping Software</title>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" />
 
     <style>
@@ -14,8 +14,8 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 15vw;
-            height: 50vh;
+            width: 100vw;
+            height: 100vh;
             pointer-events: none;
             z-index: 1000;
         }
@@ -29,19 +29,19 @@
             transition: transform 0.1s ease-out;
         }
     </style>
-
-
 </head>
 
 <body>
     <div id="app"></div>
+
     <script>
         window.$docsify = {
             coverpage: true,
-            name: 'My Docs',
+            name: 'EW458 Mapping Software',
             repo: 'https://github.com/juanortiz28/EW458_FINAL_PROJECT'
         };
     </script>
+
     <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 
     <script>
@@ -49,25 +49,19 @@
             const plane = document.getElementById('plane');
             if (!plane) return;
 
-            // Get scroll progress (0 = top, 1 = bottom)
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
             const docHeight = document.documentElement.scrollHeight - window.innerHeight;
             const scrollProgress = docHeight > 0 ? scrollTop / docHeight : 0;
 
-            // Plane path: from left-top to right-bottom
             const maxX = window.innerWidth;
             const maxY = window.innerHeight;
 
-            // Apply scroll-based position
             const moveX = scrollProgress * maxX;
             const moveY = scrollProgress * maxY;
 
             plane.style.transform = `translate(${moveX}px, ${moveY}px) rotate(20deg)`;
         });
     </script>
-
-
-
 </body>
 
 </html>
