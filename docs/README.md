@@ -21,12 +21,55 @@ Windows: `pip installs roslibpy`
 
 # Pseudocode for Map
 
-```python
-import roslibpy
+This script allows manual control of a ROS-based robot using keyboard input, while also dynamically building an occupancy grid map using laser scan data.
 
-#read scan topic
-...
+---
 
+## How It Works (High-Level Summary)
+
+- **Connects to ROS** via `roslibpy` over WebSockets.
+- **Subscribes** to `odom` and `scan` topics.
+- **Publishes** velocity commands to `/cmd_vel`.
+- **Listens to keyboard input** (WASD, spacebar, etc.).
+- **Updates a 2D map** in real-time from laser scan data.
+- **Publishes a map** to `/saltymap` for visualization.
+
+---
+
+## Pseudo Code Breakdown
+
+```pseudo
+1. Initialize ROS connection
+    - Connect to IP and port
+    - Subscribe to odometry and laser scan topics
+    - Set up publishers for velocity and occupancy grid
+
+2. Track robot position from odometry
+    - Convert quaternion to yaw (heading angle)
+    - Store x, y, theta (pose)
+
+3. Listen for keyboard input:
+    - W: move forward
+    - A: rotate left
+    - D: rotate right
+    - Space: toggle armed/disarmed state
+    - R: reset pose/map
+    - G: toggle continuous map updates
+    - T: trigger manual map update
+    - Q: quit and shut down
+
+4. Update map:
+    - For each valid laser scan:
+        - Convert polar scan data to Cartesian (x, y)
+        - Convert to grid coordinates
+        - Mark free space (-1) and obstacles (20)
+        - Merge with existing occupancy grid
+    - Publish map as a `nav_msgs/OccupancyGrid` message
+
+5. Loop:
+    - If armed and movement keys are pressed:
+        - Publish velocity command
+        - Optionally update the map every 0.2s
 ```
 
 # How to run
