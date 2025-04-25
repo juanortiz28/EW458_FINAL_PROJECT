@@ -38,7 +38,7 @@ python3 FILENAME.py
 ```
 
 # Example Maps
-The following maps were generated through motion through Hopper Hall
+The following GIF was generated through running the Map Scanner program on the iRobot, and through the recording function of our professor's HTML program.
 
 ![Hopper Map](recording.gif)
 

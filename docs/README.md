@@ -39,5 +39,5 @@ The following maps were generated through motion through Hopper Hall
 
 ![Hopper Map](recording.gif)
 
-# About Designers
-pictures
+# Designers
+![IJ](ij.jpg)
