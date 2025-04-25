@@ -74,8 +74,9 @@ This script allows manual control of a ROS-based robot using keyboard input, whi
 
 # How to run
 ``` bash
-python3 FILENAME.py
+python3 finalcode.py
 ```
+Upon downloading the repository and the Python code, run the following command to run the python mapping program.
 
 # Example Maps
 The following maps were generated through motion through Hopper Hall
